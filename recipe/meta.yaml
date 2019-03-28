@@ -1,4 +1,5 @@
-{% set version = "1.0" %}
+{% set version = "1.0.1" %}
+{% set hash = "899853fb7607c319fbfecde281750b4d607e6f50ac5d919d064726e2f186b033" %}
 
 package:
   name: capytaine
@@ -6,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mancellin/capytaine/archive/v{{version}}.tar.gz
-  sha256: 072de801b50b4052277b5eb3d634734a11079b69789e5fb3bccb7363d199f637
+  sha256: {{ hash }}
 
 build:
   skip: True  # [py<36 or win]
