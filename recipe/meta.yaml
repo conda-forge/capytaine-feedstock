@@ -47,6 +47,7 @@ test:
     - capytaine
   requires:
     - pytest
+    - hypothesis
   source_files:
     - pytest/*.py
     - pytest/**/*
