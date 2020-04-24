@@ -45,6 +45,7 @@ test:
   requires:
     - pytest
     - hypothesis
+    - pip
   source_files:
     - pytest/*.py
     - pytest/**/*
