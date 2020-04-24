@@ -45,11 +45,11 @@ test:
   requires:
     - pytest
     - hypothesis
-    - quadpy
   source_files:
     - pytest/*.py
     - pytest/**/*
   commands:
+    - pip install quadpy  # Optional dependency, needed for some of the tests
     - pytest
     - capytaine --help
 
