@@ -1,5 +1,5 @@
-{% set version = "1.1" %}
-{% set hash = "0ca0c010bbfe4887b2b4678a2d9e6a069f7726a5e61f831f266283fc557578f4" %}
+{% set version = "1.2" %}
+{% set hash = "b3dc967ffde8a0b9d815ab955b92a768711666236474776771b48f22e9e80f89" %}
 
 package:
   name: capytaine
@@ -33,12 +33,9 @@ requirements:
     - libpython  # [win]
   run:
     - python
-    - attrs
     - {{ pin_compatible('numpy') }}
-    - pandas
-    - matplotlib
     - scipy
-    - vtk
+    - pandas
     - xarray
     - llvm-openmp  # [osx]
 
@@ -48,6 +45,7 @@ test:
   requires:
     - pytest
     - hypothesis
+    - quadpy
   source_files:
     - pytest/*.py
     - pytest/**/*
