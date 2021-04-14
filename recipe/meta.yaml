@@ -1,5 +1,5 @@
-{% set version = "1.2" %}
-{% set hash = "b3dc967ffde8a0b9d815ab955b92a768711666236474776771b48f22e9e80f89" %}
+{% set version = "1.2.1" %}
+{% set hash = "c58f7638430fb6067c552f2ba0b6022226166f6937964c3ef763386bd762937a" %}
 
 package:
   name: capytaine
@@ -10,9 +10,9 @@ source:
   sha256: {{ hash }}
 
 build:
-  skip: True  # [py<36]
-  number: 4
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  skip: true  # [py<36]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - capytaine = capytaine.ui.cli:main
 
