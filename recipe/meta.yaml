@@ -50,7 +50,6 @@ test:
     - pytest/*.py
     - pytest/**/*
   commands:
-    - pip install quadpy==0.14.11  # Optional dependency, needed for some of the tests
     - pytest
     - capytaine --help
 
