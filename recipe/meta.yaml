@@ -9,7 +9,7 @@ source:
   # url: https://github.com/mancellin/capytaine/archive/v{{ version }}.tar.gz
   url: https://github.com/mancellin/capytaine/archive/fix_build.tar.gz
   # sha256: {{ hash }}
-  sha256: a1fa1728ef003bc43284054bed74bbb068b6f0a033e2689325119908c27d4ce1
+  sha256: c9c42190745dc79a30b8e465d2fcdb1dfbff24addd4bf4ae2c5a04fe1f95407c
 
 build:
   skip: true  # [py<36]
