@@ -1,12 +1,12 @@
 {% set version = "1.4" %}
-{% set hash = "762d499d9411eb07f6422284e8312eed04eda7a7c2d4c4f890cbe12fb57d0e5e" %}
+{% set hash = "ce1daea7a065d3f6cfac97fa77c39acb95885ac7c3a75d0b4503f8e6e8eff0ad" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  url: https://github.com/mancellin/capytaine/archive/v{{ version }}.tar.gz
+  url: https://github.com/mancellin/capytaine/archive/v1.4-for-conda-forge.tar.gz
   sha256: {{ hash }}
 
 build:
