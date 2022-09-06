@@ -1,17 +1,17 @@
-{% set version = "1.4" %}
-{% set hash = "ce1daea7a065d3f6cfac97fa77c39acb95885ac7c3a75d0b4503f8e6e8eff0ad" %}
+{% set version = "1.4.1" %}
+{% set hash = "06e05706c7927c10de240584503d4d34884d222b86b309eb4e785ee7f365fafc" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  url: https://github.com/mancellin/capytaine/archive/v1.4-for-conda-forge.tar.gz
+  url: https://github.com/capytaine/capytaine/archive/v{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:
   skip: true  # [py<36]
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - capytaine = capytaine.ui.cli:main
@@ -54,7 +54,7 @@ test:
     - capytaine --help
 
 about:
-  home: https://github.com/mancellin/capytaine
+  home: https://github.com/capytaine/capytaine
   license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
