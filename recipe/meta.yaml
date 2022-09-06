@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/capytaine/capytaine/archive/v{{ version }}.tar.gz
+  url: https://github.com/capytaine/capytaine/archive/v{{ version }}.post1.tar.gz
   sha256: {{ hash }}
 
 build:
