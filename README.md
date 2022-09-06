@@ -1,7 +1,7 @@
 About capytaine
 ===============
 
-Home: https://github.com/mancellin/capytaine
+Home: https://github.com/capytaine/capytaine
 
 Package license: GPL-3.0-or-later
 
