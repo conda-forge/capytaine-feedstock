@@ -1,12 +1,12 @@
-{% set version = "1.4.1" %}
-{% set hash = "226bddae0a9443a0caeb517c062ee8a8e96189e47dff8ac7cd0edcdd4440ecc3" %}
+{% set version = "1.4.2" %}
+{% set hash = "a0602ea3edfa6f9fc6b9c8cbcc639f5089d533aed937d1e706bd25b2f2bc6df8" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  url: https://github.com/capytaine/capytaine/archive/v{{ version }}.post1.tar.gz
+  url: https://github.com/capytaine/capytaine/archive/v{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:
