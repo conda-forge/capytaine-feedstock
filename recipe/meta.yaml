@@ -1,5 +1,5 @@
 {% set version = "1.5" %}
-{% set hash = "c70bb5532d06429d28f08b5a3764146dddda71cffa15cc5719c8f10e2f4cc5f3" %}
+{% set hash = "594df36d11dabbfabc8094d8fad525376afc3d055ce1045ae6ae5cf98ce289c4" %}
 
 package:
   name: capytaine
