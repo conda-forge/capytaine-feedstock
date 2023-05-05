@@ -26,7 +26,8 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
+    - meson-python
+    - charset-normalizer
     - numpy
     - llvm-openmp  # [osx]
     - m2w64-toolchain  # [win]
