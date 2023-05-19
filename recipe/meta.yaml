@@ -1,16 +1,16 @@
-{% set version = "1.5" %}
-{% set hash = "6a1134265ad58e95373f2009cdcd5fc2081647a7e9ca6dbb74b9f971f94054a0" %}
+{% set version = "2.0.dev0" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  url: https://github.com/capytaine/capytaine/releases/download/v{{ version }}/capytaine-full-{{ version }}.tar.gz
-  sha256: {{ hash }}
+  git_url: https://github.com/capytaine/capytaine
+  git_rev: cbdc092575044a84963ed0ec2624b8d691f6bed6
+  git_depth: 1
 
 build:
-  skip: true  # [py<36]
+  skip: true  # [py<37]
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -18,15 +18,16 @@ build:
 
 requirements:
   build:
-    - {{ compiler('fortran') }}
-    - {{ compiler('c') }}
+    - {{ compiler('fortran') }}  # [unix]
+    - {{ compiler('c') }}  # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
     - {{ compiler('m2w64_fortran') }}  # [win]
     - llvm-openmp  # [osx]
   host:
     - python
     - pip
-    - setuptools
+    - meson-python
+    - charset-normalizer
     - numpy
     - llvm-openmp  # [osx]
     - m2w64-toolchain  # [win]
