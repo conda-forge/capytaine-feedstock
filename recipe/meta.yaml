@@ -6,12 +6,12 @@ package:
 
 source:
   git_url: https://github.com/capytaine/capytaine
-  git_rev: cbdc092575044a84963ed0ec2624b8d691f6bed6
+  git_rev: 47d6765e8ea49fb6d6389f03740f1c15bc629bf9
   git_depth: 1
 
 build:
   skip: true  # [py<37]
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - capytaine = capytaine.ui.cli:main
