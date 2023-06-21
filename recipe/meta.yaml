@@ -18,16 +18,17 @@ build:
 
 requirements:
   build:
-    - {{ compiler('fortran') }}
-    - {{ compiler('c') }}
+    - {{ compiler('fortran') }}  # [unix]
+    - {{ compiler('c') }}  # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
     - {{ compiler('m2w64_fortran') }}  # [win]
     - llvm-openmp  # [osx]
   host:
     - python
     - pip
-    - setuptools
     - numpy
+    - meson-python
+    - charset-normalizer
     - llvm-openmp  # [osx]
     - m2w64-toolchain  # [win]
     - libpython  # [win]
