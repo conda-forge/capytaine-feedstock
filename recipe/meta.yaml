@@ -1,4 +1,4 @@
-{% set version = "2.0.dev0" %}
+{% set version = "2.1.dev0" %}
 
 package:
   name: capytaine
@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: https://github.com/capytaine/capytaine
-  git_rev: 47d6765e8ea49fb6d6389f03740f1c15bc629bf9
+  git_rev: 9e1233d8561587964c534023920b74a35a52f557
   git_depth: 1
 
 build:
@@ -38,6 +38,7 @@ requirements:
     - scipy
     - pandas
     - xarray
+    - rich
     - llvm-openmp  # [osx]
 
 test:
@@ -45,7 +46,6 @@ test:
     - capytaine
   requires:
     - pytest
-    - hypothesis
     - pip
   source_files:
     - pytest/*.py
