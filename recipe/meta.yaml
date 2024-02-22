@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py<37]
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - capytaine = capytaine.ui.cli:main
@@ -26,7 +26,7 @@ requirements:
   host:
     - python
     - pip
-    - numpy
+    - numpy <=1.26.2
     - meson-python
     - charset-normalizer
     - llvm-openmp  # [osx]
