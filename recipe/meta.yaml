@@ -11,7 +11,8 @@ source:
 
 
 build:
-  skip: true  # [py<37 or python_impl == 'pypy']
+  skip: True  # [py<37]
+  skip: True  # [python_impl == 'pypy']
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
