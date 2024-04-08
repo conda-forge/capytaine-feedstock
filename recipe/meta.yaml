@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: https://github.com/capytaine/capytaine
-  git_rev: f63b2eeabfcf03e3d761577446d90b5f1d68c107
+  git_rev: 1f1dea296ca0af6e9f01efa29419017b366e000f
   git_depth: 1
 
 
