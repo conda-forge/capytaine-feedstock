@@ -1,14 +1,13 @@
-{% set version = "2.1.dev" %}
+{% set version = "2.1" %}
+{% set hash = "f1945c02609fe16f58b691e7ad2f297087980fa6e7d1d1ca5826e478204e408e" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  git_url: https://github.com/capytaine/capytaine
-  git_rev: 1f1dea296ca0af6e9f01efa29419017b366e000f
-  git_depth: 1
-
+  url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: {{ hash }}
 
 build:
   skip: True  # [py<37]
