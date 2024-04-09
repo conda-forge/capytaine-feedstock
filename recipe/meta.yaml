@@ -10,7 +10,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  skip: True  # [py<37]
+  skip: True  # [py<38]
   skip: True  # [python_impl == 'pypy']
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
