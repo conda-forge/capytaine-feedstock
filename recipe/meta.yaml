@@ -1,5 +1,5 @@
-{% set version = "2.1" %}
-{% set hash = "f1945c02609fe16f58b691e7ad2f297087980fa6e7d1d1ca5826e478204e408e" %}
+{% set version = "2.2" %}
+{% set hash = "9863306a8752049bfd09210a7f67c42670e8d7295c17641f228b4f597f3ba284" %}
 
 package:
   name: capytaine
@@ -9,10 +9,15 @@ source:
   url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
   sha256: {{ hash }}
 
+  ## For dry-run before making the release
+  # git_url: https://github.com/capytaine/capytaine
+  # git_rev: master
+  # git_depth: 1
+
 build:
   skip: True  # [py<38]
   skip: True  # [python_impl == 'pypy']
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - capytaine = capytaine.ui.cli:main
