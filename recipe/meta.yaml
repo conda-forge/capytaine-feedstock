@@ -1,4 +1,4 @@
-{% set version = "2.2" %}
+{% set version = "2.2.1" %}
 {% set hash = "9863306a8752049bfd09210a7f67c42670e8d7295c17641f228b4f597f3ba284" %}
 
 package:
@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: {{ hash }}
+  # url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
+  # sha256: {{ hash }}
 
   ## For dry-run before making the release
-  # git_url: https://github.com/capytaine/capytaine
-  # git_rev: master
-  # git_depth: 1
+  git_url: https://github.com/capytaine/capytaine
+  git_rev: master
+  git_depth: 1
 
 build:
   skip: True  # [py<38]
