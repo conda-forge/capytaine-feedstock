@@ -17,19 +17,16 @@ source:
 build:
   skip: True  # [py<38]
   skip: True  # [python_impl == 'pypy']
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - capytaine = capytaine.ui.cli:main
 
 requirements:
   build:
-    - {{ compiler('fortran') }}  # [unix]
-    - {{ compiler('c') }}  # [unix]
-    - {{ stdlib("c") }}    # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ stdlib("m2w64_c") }}    # [win]
-    - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ stdlib("c") }}
+    - {{ compiler("c") }}
+    - {{ compiler("fortran") }}
     - llvm-openmp  # [osx]
   host:
     - python
