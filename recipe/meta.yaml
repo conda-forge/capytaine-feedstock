@@ -1,18 +1,18 @@
-{% set version = "2.2.1" %}
-{% set hash = "96e8348cddb166b8d47d6ecc9540dfbbe166d51a5fb7e677eedefdcc4c5d9fd7" %}
+{% set version = "2.3" %}
+{% set hash = "99e34e43498237ce0a7a693deec11325fad2b4353874d1a103ce5f5fc5dcbc78" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  # url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
-  # sha256: {{ hash }}
+  url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: {{ hash }}
 
-  # For dry-run before making the release
-  git_url: https://github.com/capytaine/capytaine
-  git_rev: master
-  git_depth: 1
+  # # For dry-run before making the release
+  # git_url: https://github.com/capytaine/capytaine
+  # git_rev: master
+  # git_depth: 1
 
 build:
   skip: True  # [py<38]
