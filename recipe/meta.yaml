@@ -9,7 +9,7 @@ source:
   # url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
 
   # For dry-run before making the release
-  url: https://github.com/capytaine/capytaine/archive/refs/heads/hotfix.zip
+  url: https://github.com/capytaine/capytaine/archive/refs/heads/hotfix.tar.gz
 
   sha256: {{ hash }}
 
