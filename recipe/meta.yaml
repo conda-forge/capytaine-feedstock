@@ -10,9 +10,9 @@ source:
   # sha256: {{ hash }}
 
   # For dry-run before making the release
-  git_url: https://github.com/capytaine/capytaine
+  git_url: -b hotfix https://github.com/capytaine/capytaine
   git_rev: hotfix
-  git_depth: 1
+  git_depth: -1
 
 build:
   skip: True  # [py<38]
