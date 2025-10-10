@@ -1,5 +1,5 @@
 {% set version = "2.3.1" %}
-{% set hash = "99e34e43498237ce0a7a693deec11325fad2b4353874d1a103ce5f5fc5dcbc78" %}
+{% set hash = "d52c4df8d46f463de205d278aa5c4d028f904610d62339eec9d889f0c85e843d" %}
 
 package:
   name: capytaine
@@ -7,12 +7,11 @@ package:
 
 source:
   # url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
-  # sha256: {{ hash }}
 
   # For dry-run before making the release
-  git_url: -b hotfix https://github.com/capytaine/capytaine
-  git_rev: hotfix
-  git_depth: -1
+  url: https://github.com/capytaine/capytaine/archive/refs/heads/hotfix.zip
+
+  sha256: {{ hash }}
 
 build:
   skip: True  # [py<38]
