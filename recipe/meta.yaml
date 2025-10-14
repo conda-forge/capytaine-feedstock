@@ -1,15 +1,15 @@
 {% set version = "2.3.1" %}
-{% set hash = "d52c4df8d46f463de205d278aa5c4d028f904610d62339eec9d889f0c85e843d" %}
+{% set hash = "81a3b75c6b5cfdf29bb660a7b87a99be184d70a78093651e23bc886e46223d45" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  # url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
 
-  # For dry-run before making the release
-  url: https://github.com/capytaine/capytaine/archive/refs/heads/hotfix.tar.gz
+  # # For dry-run before making the release
+  # url: https://github.com/capytaine/capytaine/archive/refs/heads/master.tar.gz
 
   sha256: {{ hash }}
 
