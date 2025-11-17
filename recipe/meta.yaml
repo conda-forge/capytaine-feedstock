@@ -34,7 +34,8 @@ requirements:
     - meson-python
     - charset-normalizer
     - llvm-openmp  # [osx]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - libgomp  # [linux]
+    - llvm-openmp-fortran  # [win]
     - libpython  # [win]
   run:
     - python
