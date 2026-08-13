@@ -48,6 +48,8 @@ test:
   requires:
     - pytest
     - pip
+    # one test depends on implicit scalar conversion that was removed
+    - numpy <2.4
   source_files:
     - pytest/*.py
     - pytest/**/*
