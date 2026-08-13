@@ -33,7 +33,6 @@ requirements:
     - meson-python
     - charset-normalizer
     - llvm-openmp  # [osx]
-    - {{ compiler('m2w64_c') }}  # [win]
     - libpython  # [win]
   run:
     - python
