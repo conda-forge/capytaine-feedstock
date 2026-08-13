@@ -33,7 +33,7 @@ requirements:
     - meson-python
     - charset-normalizer
     - llvm-openmp  # [osx]
-    - libpython  # [win]
+    - distutils-activate-mingw  # [win]
   run:
     - python
     - scipy
