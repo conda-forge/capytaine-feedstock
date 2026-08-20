@@ -1,15 +1,14 @@
-{% set version = "2.3.1" %}
-{% set hash = "81a3b75c6b5cfdf29bb660a7b87a99be184d70a78093651e23bc886e46223d45" %}
+{% set version = "3.0.0dev" %}
+{% set hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
-
-  # # For dry-run before making the release
-  # url: https://github.com/capytaine/capytaine/archive/refs/heads/master.tar.gz
+  # url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
+  # For dry-run before making the release
+  url: https://github.com/capytaine/capytaine/archive/refs/heads/master.tar.gz
 
   sha256: {{ hash }}
 
@@ -59,8 +58,7 @@ test:
 
 about:
   home: https://github.com/capytaine/capytaine
-  license: GPL-3.0-or-later
-  license_family: GPL
+  license: Apache-2.0
   license_file: LICENSE
   summary: A Python-based linear potential flow solver based on Nemoh
 

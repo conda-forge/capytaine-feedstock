@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/capytaine-feeds
 
 Home: https://github.com/capytaine/capytaine
 
-Package license: GPL-3.0-or-later
+Package license: Apache-2.0
 
 Summary: A Python-based linear potential flow solver based on Nemoh
 
