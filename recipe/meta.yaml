@@ -25,6 +25,7 @@ requirements:
     - {{ compiler("c") }}
     - {{ compiler("fortran") }}
     - llvm-openmp  # [osx]
+    - gcc_impl_osx-64 ==15.3.*  # [osx]
   host:
     - python
     - pip
