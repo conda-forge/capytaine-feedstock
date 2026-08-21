@@ -27,6 +27,8 @@ requirements:
     - llvm-openmp  # [osx]
     # Temporary fix for https://github.com/conda-forge/ctng-compilers-feedstock/issues/225
     - gcc_impl_osx-64 {{ fortran_compiler_version }}.*  # [osx]
+    - m2w64-sysroot_win-64 ==12.0.0.r4.gg4f2fc60ca hd8ed1ab_10  # [win]
+    - libwinpthread ==12.0.0.r4.gg4f2fc60ca h57928b3_10  # [win]
   host:
     - python
     - pip
