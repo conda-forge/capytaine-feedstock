@@ -1,14 +1,15 @@
-{% set version = "3.0.0dev" %}
-{% set hash = "b18c29a90b82129f4b4c5f64a59d07202861775dc29715fd1c15a6266ec76cd0" %}
+{% set version = "3.0.0" %}
+{% set hash = "0d7cc6af6603a3abbe134471a10a0170aa82f3b3b60c44a1a2ec9d1a3d9cf5cb" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  # url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
-  # For dry-run before making the release
-  url: https://github.com/capytaine/capytaine/archive/refs/heads/master.tar.gz
+  url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
+
+  # # For dry-run before making the release:
+  # url: https://github.com/capytaine/capytaine/archive/refs/heads/master.tar.gz
 
   sha256: {{ hash }}
 
@@ -27,6 +28,7 @@ requirements:
     - llvm-openmp  # [osx]
     # Temporary fix for https://github.com/conda-forge/ctng-compilers-feedstock/issues/225
     - gcc_impl_osx-64 {{ fortran_compiler_version }}.*  # [osx]
+    # Temporary fix for https://github.com/conda-forge/m2w64-sysroot-feedstock/issues/23
     - m2w64-sysroot_win-64 ==12.0.0.r4.gg4f2fc60ca hd8ed1ab_10  # [win]
     - libwinpthread ==12.0.0.r4.gg4f2fc60ca h57928b3_10  # [win]
   host:
