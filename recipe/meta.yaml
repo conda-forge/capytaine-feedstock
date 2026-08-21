@@ -1,5 +1,5 @@
-{% set version = "2.3.1" %}
-{% set hash = "81a3b75c6b5cfdf29bb660a7b87a99be184d70a78093651e23bc886e46223d45" %}
+{% set version = "3.0.0" %}
+{% set hash = "0d7cc6af6603a3abbe134471a10a0170aa82f3b3b60c44a1a2ec9d1a3d9cf5cb" %}
 
 package:
   name: capytaine
@@ -8,13 +8,13 @@ package:
 source:
   url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
 
-  # # For dry-run before making the release
+  # # For dry-run before making the release:
   # url: https://github.com/capytaine/capytaine/archive/refs/heads/master.tar.gz
 
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - capytaine = capytaine.ui.cli:main
@@ -26,6 +26,11 @@ requirements:
     - {{ compiler("c") }}
     - {{ compiler("fortran") }}
     - llvm-openmp  # [osx]
+    # Temporary fix for https://github.com/conda-forge/ctng-compilers-feedstock/issues/225
+    - gcc_impl_osx-64 {{ fortran_compiler_version }}.*  # [osx]
+    # Temporary fix for https://github.com/conda-forge/m2w64-sysroot-feedstock/issues/23
+    - m2w64-sysroot_win-64 ==12.0.0.r4.gg4f2fc60ca hd8ed1ab_10  # [win]
+    - libwinpthread ==12.0.0.r4.gg4f2fc60ca h57928b3_10  # [win]
   host:
     - python
     - pip
@@ -59,8 +64,7 @@ test:
 
 about:
   home: https://github.com/capytaine/capytaine
-  license: GPL-3.0-or-later
-  license_family: GPL
+  license: Apache-2.0
   license_file: LICENSE
   summary: A Python-based linear potential flow solver based on Nemoh
 
