@@ -42,7 +42,7 @@ requirements:
   run:
     - python
     - scipy
-    - pandas
+    - pandas <3
     - xarray
     - rich
     - llvm-openmp  # [osx]
