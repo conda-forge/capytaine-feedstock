@@ -14,7 +14,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - capytaine = capytaine.ui.cli:main
@@ -26,11 +26,11 @@ requirements:
     - {{ compiler("c") }}
     - {{ compiler("fortran") }}
     - llvm-openmp  # [osx]
-    # Temporary fix for https://github.com/conda-forge/ctng-compilers-feedstock/issues/225
-    - gcc_impl_osx-64 {{ fortran_compiler_version }}.*  # [osx]
-    # Temporary fix for https://github.com/conda-forge/m2w64-sysroot-feedstock/issues/23
-    - m2w64-sysroot_win-64 ==12.0.0.r4.gg4f2fc60ca hd8ed1ab_10  # [win]
-    - libwinpthread ==12.0.0.r4.gg4f2fc60ca h57928b3_10  # [win]
+    # # Temporary fix for https://github.com/conda-forge/ctng-compilers-feedstock/issues/225
+    # - gcc_impl_osx-64 {{ fortran_compiler_version }}.*  # [osx]
+    # # Temporary fix for https://github.com/conda-forge/m2w64-sysroot-feedstock/issues/23
+    # - m2w64-sysroot_win-64 ==12.0.0.r4.gg4f2fc60ca hd8ed1ab_10  # [win]
+    # - libwinpthread ==12.0.0.r4.gg4f2fc60ca h57928b3_10  # [win]
   host:
     - python
     - pip
@@ -53,8 +53,7 @@ test:
   requires:
     - pytest
     - pip
-    # one test depends on implicit scalar conversion that was removed
-    - numpy <2.4
+    - numpy
   source_files:
     - pytest/*.py
     - pytest/**/*
