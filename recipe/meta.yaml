@@ -1,20 +1,20 @@
-{% set version = "3.0.0" %}
-{% set hash = "0d7cc6af6603a3abbe134471a10a0170aa82f3b3b60c44a1a2ec9d1a3d9cf5cb" %}
+{% set version = "3.1.0" %}
+{% set hash = "f79f3bd84e1a86dbc62ec34c798711d254cd01a1a24151a743e892a4242e65e5" %}
 
 package:
   name: capytaine
   version: {{ version }}
 
 source:
-  url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
+  # url: https://github.com/capytaine/capytaine/archive/refs/tags/v{{ version }}.tar.gz
 
-  # # For dry-run before making the release:
-  # url: https://github.com/capytaine/capytaine/archive/refs/heads/master.tar.gz
+  # For dry-run before making the release:
+  url: https://github.com/capytaine/capytaine/archive/refs/heads/master.tar.gz
 
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - capytaine = capytaine.ui.cli:main
@@ -37,9 +37,10 @@ requirements:
   run:
     - python
     - scipy
-    - pandas <3
+    - pandas
     - xarray
     - rich
+    - array-api-compat >=1.5
     - llvm-openmp  # [osx]
 
 test:
